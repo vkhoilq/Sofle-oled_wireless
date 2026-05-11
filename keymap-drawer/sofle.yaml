@@ -141,11 +141,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+Gui+Z
+  - Gui+V
+  - Gui+C
+  - Gui+X
+  - Gui+Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LGUI
@@ -153,7 +153,7 @@ layers:
   - LCTRL
   - LSHFT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CAPSLOCK
   - LEFT
   - DOWN
   - UP
@@ -163,11 +163,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: Meh+LEFT GUI, h: sticky}
+  - Hyper+V
   - {t: ▽, type: trans}
-  - V
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
+  - INSERT
   - HOME
   - PG DN
   - PG UP
