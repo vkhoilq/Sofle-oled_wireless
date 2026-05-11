@@ -17,11 +17,92 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Genpd1 {
+            bindings = <&wp1>;
+            key-positions = <22 34 48>;
+            layers = <2>;
+        };
+
+        Genpd2 {
+            bindings = <&wp2>;
+            key-positions = <21 33 47>;
+            layers = <2>;
+        };
+
+        cmbRaycast {
+            bindings = <&kp LA(ENTER)>;
+            key-positions = <54 55>;
+            layers = <0>;
+        };
+
+        ToDef {
+            bindings = <&to 0>;
+            key-positions = <15 27 39>;
+        };
+
+        ToMouse {
+            bindings = <&to 3>;
+            key-positions = <14 26 38>;
+        };
+
+        ToNav {
+            bindings = <&to 2>;
+            key-positions = <13 25 37>;
+        };
+    };
+
+    macros {
+        wp1: wp1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT &kp LS(T) &kp I &kp N0 &kp N2 &kp C &kp A &kp N0 &kp N9 &kp RET>;
+            label = "WP1";
+        };
+
+        wp2: wp2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT &kp LS(A) &kp N &kp H &kp K &kp H &kp O &kp I &kp N1 &kp N4 &kp B &kp E &kp N &kp G &kp O &kp C &kp RET>;
+            label = "WP2";
+        };
+    };
+
+    behaviors {
+        hrl: hrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <1>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <6 7 8 9 10 23 11 22 21 18 19 20 30 43 44 45 31 32 46 47 33 34 48 35 49>;
+        };
+
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <1>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 0 1 2 3 12 13 14 15 24 25 26 27 36 37 38 39 4 5 16 17 28 29 41 42 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            label = "default";
+        Default {
+            label = "Def";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -31,11 +112,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC       &kp N1  &kp N2          &kp N3    &kp N4     &kp N5                              &kp N6   &kp N7         &kp N8      &kp N9        &kp N0    &kp PLUS
-&kp CAPSLOCK  &kp Q   &kp W           &kp F     &kp J      &kp COMMA                           &kp DOT  &kp L          &kp U       &kp Y         &kp SQT   &kp UNDERSCORE
-&kp TAB       &kp A   &kp R           &kp S     &kp T      &kp G                               &kp M    &kp N          &kp E       &kp I         &kp O     &kp SQT
-&kp LEFT_GUI  &kp Z   &kp X           &kp C     &kp D      &kp V      &kp C_MUTE    &none      &kp K    &kp H          &kp P       &kp B         &kp FSLH  &kp RSHFT
-                      &kp LEFT_SHIFT  &kp LALT  &kp LCTRL  &mo 0      &kp SPACE     &kp ENTER  &mo 0    &kp BACKSPACE  &kp DELETE  &kp QUESTION
+&none  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                  &kp N6           &kp N7             &kp N8               &kp N9           &kp N0           &none
+&none  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                               &kp DOT          &kp L              &kp U                &kp Y            &kp SQT          &none
+&none  &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                   &kp M            &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &none
+&none  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none        &kp K            &kp H              &kp P                &kp B            &kp FSLH         &none
+                        &none            &none                &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 RIGHT_ALT    &none                &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
