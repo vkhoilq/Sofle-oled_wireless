@@ -1,7 +1,66 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', +, CAPSLOCK, Q, W, F, J, ',', ., L, U, Y, '''', _, TAB, A, R, S, T, G, M, N, E, I, O, '''', LEFT
-      GUI, Z, X, C, D, V, MUTE, '', K, H, P, B, /, RSHFT, LEFT SHIFT, LALT, LCTRL, default, SPACE, ENTER, default, BACKSPACE, DELETE, '?']
+  Def:
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - Q
+  - W
+  - F
+  - J
+  - ','
+  - .
+  - L
+  - U
+  - Y
+  - ''''
+  - ''
+  - ''
+  - {t: A, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT CONTROL}
+  - {t: T, h: LEFT SHIFT}
+  - G
+  - M
+  - {t: N, h: LEFT SHIFT}
+  - {t: E, h: LEFT CONTROL}
+  - {t: I, h: LEFT ALT}
+  - {t: O, h: LEFT GUI}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - MUTE
+  - ''
+  - K
+  - H
+  - P
+  - B
+  - /
+  - ''
+  - ''
+  - ''
+  - {t: ESC, h: Media}
+  - {t: SPACE, h: Nav}
+  - {t: TAB, h: Mouse}
+  - {t: ENTER, h: SYM}
+  - {t: BACKSPACE, h: NUM}
+  - {t: RIGHT ALT, h: Func}
+  - ''
+  - ''
   BK:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -117,7 +176,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - RET
   - BSPC
@@ -179,7 +238,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,7 +300,7 @@ layers:
   - Sft+(
   - Sft+)
   - Sft+_
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -303,7 +362,7 @@ layers:
   - '0'
   - '-'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -365,7 +424,7 @@ layers:
   - TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Media:
@@ -421,6 +480,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -428,4 +488,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+combos:
+- p: [22, 34, 48]
+  k: '&wp1'
+  l: [Nav]
+- p: [21, 33, 47]
+  k: '&wp2'
+  l: [Nav]
+- p: [54, 55]
+  k: Alt+ENTER
+  l: [Def]
+- p: [15, 27, 39]
+  k: {t: Def, h: toggle}
+- p: [14, 26, 38]
+  k: {t: Mouse, h: toggle}
+- p: [13, 25, 37]
+  k: {t: Nav, h: toggle}
