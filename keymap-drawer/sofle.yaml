@@ -13,7 +13,7 @@ layers:
   - '9'
   - '0'
   - ''
-  - ''
+  - Ctl+SPACE
   - Q
   - W
   - F
@@ -25,7 +25,7 @@ layers:
   - Y
   - ''''
   - ''
-  - ''
+  - Sft+Gui+[
   - {t: A, h: LEFT GUI}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LEFT CONTROL}
@@ -37,7 +37,7 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: O, h: LEFT GUI}
   - ''
-  - ''
+  - Sft+Gui+]
   - Z
   - X
   - C
@@ -51,16 +51,16 @@ layers:
   - B
   - /
   - ''
-  - ''
-  - ''
+  - DOWN
+  - UP ARROW
   - {t: ESC, h: Media}
   - {t: SPACE, h: Nav}
   - {t: TAB, h: Mouse}
   - {t: ENTER, h: SYM}
   - {t: BACKSPACE, h: NUM}
   - {t: RIGHT ALT, h: Func}
-  - ''
-  - ''
+  - LEFT ARROW
+  - RIGHT
   BK:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -504,3 +504,6 @@ combos:
   k: {t: Mouse, h: toggle}
 - p: [13, 25, 37]
   k: {t: Nav, h: toggle}
+- p: [53, 56]
+  k: Alt+SPACE
+  l: [Def]
