@@ -56,6 +56,12 @@
             bindings = <&to 2>;
             key-positions = <13 25 37>;
         };
+
+        CmbRaycastChat {
+            bindings = <&kp LA(SPACE)>;
+            key-positions = <53 56>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -116,11 +122,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                  &kp N6           &kp N7             &kp N8               &kp N9           &kp N0           &none
-&none  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                               &kp DOT          &kp L              &kp U                &kp Y            &kp SQT          &none
-&none  &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                   &kp M            &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &none
-&none  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none        &kp K            &kp H              &kp P                &kp B            &kp FSLH         &none
-                        &none            &none                &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 RIGHT_ALT    &none                &none
+&none                      &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                  &kp N6           &kp N7             &kp N8               &kp N9           &kp N0           &none
+&kp LC(SPACE)              &kp Q            &kp W            &kp F                &kp J              &kp COMMA                               &kp DOT          &kp L              &kp U                &kp Y            &kp SQT          &none
+&kp LS(LG(LEFT_BRACKET))   &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                   &kp M            &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &none
+&kp LS(LG(RIGHT_BRACKET))  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none        &kp K            &kp H              &kp P                &kp B            &kp FSLH         &none
+                                            &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 RIGHT_ALT    &kp LEFT_ARROW       &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
