@@ -122,11 +122,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none                      &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                  &kp N6           &kp N7             &kp N8               &kp N9           &kp N0           &none
+&kp RIGHT_ALT              &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                  &kp N6           &kp N7             &kp N8               &kp N9           &kp N0           &none
 &kp LC(SPACE)              &kp Q            &kp W            &kp F                &kp J              &kp COMMA                               &kp DOT          &kp L              &kp U                &kp Y            &kp SQT          &none
 &kp LS(LG(LEFT_BRACKET))   &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                   &kp M            &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &none
 &kp LS(LG(RIGHT_BRACKET))  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none        &kp K            &kp H              &kp P                &kp B            &kp FSLH         &none
-                                            &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 RIGHT_ALT    &kp LEFT_ARROW       &kp RIGHT
+                                            &kp DOWN         &key_repeat          &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 UP_ARROW     &kp LEFT_ARROW       &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -146,7 +146,7 @@
 
         Nav {
             bindings = <
-&none  &none     &none     &none      &none                     &none                                    &none          &none      &none      &none      &none      &none
+&none  &trans    &trans    &trans     &trans                    &trans                                   &trans         &trans     &trans     &trans     &trans     &none
 &none  &none     &none     &none      &none                     &none                                    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT                 &none                                    &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
 &none  &none     &none     &none      &sk LS(LA(LC(LEFT_GUI)))  &kp LS(LA(LC(LG(V))))  &none    &none    &kp INSERT     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
@@ -154,6 +154,7 @@
             >;
 
             label = "Nav";
+            sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp PG_UP PG_DN>;
         };
 
         Mouse {
@@ -166,6 +167,7 @@
             >;
 
             label = "Mouse";
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         SYM {
@@ -209,7 +211,7 @@
 &bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                       &none             &none           &none            &none              &none       &ext_power EP_TOG
 &out OUT_BLE    &none         &none         &none         &none         &none                              &none             &none           &none            &none              &none       &none
 &out OUT_USB    &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &none                              &none             &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_NEXT  &none
-&bt BT_CLR_ALL  &none         &none         &none         &none         &none         &none    &none       &none             &none           &none            &none              &none       &none
+&bt BT_CLR_ALL  &none         &none         &none         &none         &none         &none    &none       &none             &none           &none            &none              &none       &studio_unlock
                               &none         &none         &none         &none         &none    &kp C_STOP  &kp C_PLAY_PAUSE  &kp K_MUTE      &none            &none
             >;
 
