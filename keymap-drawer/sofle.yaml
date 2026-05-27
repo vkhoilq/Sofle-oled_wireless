@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
   Def:
-  - ''
+  - RIGHT ALT
   - '1'
   - '2'
   - '3'
@@ -52,13 +52,13 @@ layers:
   - /
   - ''
   - DOWN
-  - UP ARROW
+  - '&key_repeat'
   - {t: ESC, h: Media}
   - {t: SPACE, h: Nav}
   - {t: TAB, h: Mouse}
   - {t: ENTER, h: SYM}
   - {t: BACKSPACE, h: NUM}
-  - {t: RIGHT ALT, h: Func}
+  - {t: UP ARROW, h: Func}
   - LEFT ARROW
   - RIGHT
   BK:
@@ -124,16 +124,16 @@ layers:
   - {t: ▽, type: trans}
   Nav:
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -477,7 +477,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '&studio_unlock'
   - ''
   - ''
   - {type: held}
