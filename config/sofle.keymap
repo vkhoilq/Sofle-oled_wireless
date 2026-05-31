@@ -101,11 +101,11 @@
         leader2: leader2 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            de_ae { sequence = <A E>; bindings = <&de_ae>; };
-            de_oe { sequence = <O E>; bindings = <&de_oe>; };
-            de_ue { sequence = <U E>; bindings = <&de_ue>; };
+            //de_ae { sequence = <A E>; bindings = <&de_ae>; };
+            //de_oe { sequence = <O E>; bindings = <&de_oe>; };
+            //de_ue { sequence = <U E>; bindings = <&de_ue>; };
         };
-        
+
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HRL";
