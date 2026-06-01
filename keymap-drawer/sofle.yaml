@@ -50,7 +50,7 @@ layers:
   - P
   - B
   - /
-  - ''
+  - '&leader1'
   - DOWN
   - '&key_repeat'
   - {t: ESC, h: Media}
