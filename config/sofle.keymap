@@ -98,18 +98,7 @@
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
         };
 
-        esc-repeat: esc-repeat {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>;
 
-            repeat {
-                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
-                bindings = <&key_repeat>;
-                max-prior-idle-ms = <350>;
-                strict-modifiers;
-            };
-        };
         
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
