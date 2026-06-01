@@ -98,10 +98,10 @@
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
         };
 
-        shiftrepeat: shiftrepeat {
+        escrepeat: escrepeat {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>;
+            bindings = <&kp ESC>;
 
             repeat {
                 trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
@@ -167,7 +167,7 @@
 &kp RIGHT_ALT              &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7             &kp N8               &kp N9           &kp N0           &none
 &kp LC(SPACE)              &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L              &kp U                &kp Y            &kp SQT          &none
 &kp LS(LG(LEFT_BRACKET))   &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &none
-&kp LS(LG(RIGHT_BRACKET))  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H              &kp P                &kp B            &kp FSLH         &none
+&kp LS(LG(RIGHT_BRACKET))  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H              &kp P                &kp B            &kp FSLH         &leader1
                                             &kp DOWN         &key_repeat          &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &lt 6 UP_ARROW     &kp LEFT_ARROW       &kp RIGHT
             >;
 
