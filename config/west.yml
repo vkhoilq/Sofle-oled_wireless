@@ -14,6 +14,9 @@ manifest:
     - name: zmk-leader-key
       remote: urob
       revision: v0.3 # Should match ZMK release.
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
     # support nice_oled and nice_epaper
     - name: zmk-nice-oled
       remote: mctechnology17
