@@ -6,6 +6,9 @@ manifest:
       url-base: https://github.com/urob
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: mentaldesk
+      url-base: https://github.com/mentaldesk
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -21,6 +24,8 @@ manifest:
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
-
+    - name: oskey
+      remote: mentaldesk
+      revision: main
   self:
     path: config
