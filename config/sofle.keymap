@@ -14,6 +14,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 //#include <behaviors/unicode.dtsi> /* Include the Unicode module */
+#include <behaviors/oskey.dtsi> 
+
 
 #define BASE 0
 #define LOWER 1
