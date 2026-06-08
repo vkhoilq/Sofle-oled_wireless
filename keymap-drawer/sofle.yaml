@@ -37,8 +37,8 @@ layers:
   - {t: I, h: LEFT ALT}
   - {t: O, h: LEFT GUI}
   - '&ok_ltm 9 I'
-  - '&leader1'
-  - {t: Z, h: CMD}
+  - CMD
+  - Z
   - X
   - C
   - D
@@ -49,17 +49,17 @@ layers:
   - H
   - P
   - B
-  - {t: /, h: CMD}
-  - '&leader1'
+  - /
+  - CMD
   - DOWN
-  - '&key_repeat'
+  - UP ARROW
   - {t: ESC, h: Media}
   - {t: SPACE, h: Nav}
   - {t: TAB, h: Mouse}
   - {t: ENTER, h: SYM}
   - {t: BACKSPACE, h: NUM}
-  - '&key_repeat'
-  - {t: LEFT, h: Func}
+  - {t: DELETE, h: Func}
+  - LEFT ARROW
   - RIGHT
   BK:
   - {t: ▽, type: trans}
@@ -424,8 +424,8 @@ layers:
   - TAB
   - ''
   - ''
-  - ''
   - {type: held}
+  - ''
   - ''
   Media:
   - BT CLR
@@ -525,8 +525,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '&ok_undo', type: held}
+  - {type: held}
+  - '&ok_undo'
   - '&ok_cut'
   - '&ok_copy'
   - {t: ▽, type: trans}
@@ -544,7 +544,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&leader1'
   - '&ok_sel_line_start'
   - '&ok_sel_line_end'
   - '&ok_sel_prev_word'
@@ -629,3 +629,7 @@ combos:
 - p: [53, 56]
   k: Alt+SPACE
   l: [Def]
+- p: [39, 40]
+  k: '&key_repeat'
+- p: [45, 46]
+  k: '&key_repeat'
