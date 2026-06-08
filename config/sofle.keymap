@@ -64,6 +64,18 @@
             key-positions = <53 56>;
             layers = <0>;
         };
+
+        cmbRepeatL {
+            bindings = <&key_repeat>;
+            key-positions = <39 40>;
+            timeout-ms = <50>;
+        };
+
+        cmbRepeatR {
+            bindings = <&key_repeat>;
+            key-positions = <45 46>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
@@ -562,7 +574,6 @@
             };
         };
 
-
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HRL";
@@ -615,11 +626,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7             &kp N8                    &kp N9           &kp N0           &none
-&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L              &kp U                     &kp Y            &kp SQT          &none
-&ok_ltm 9 I         &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N  &hrm LEFT_CONTROL E       &hrm LEFT_ALT I  &hrm LEFT_GUI O  &ok_ltm 9 I
-&leader1       &lt 8 Z          &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H              &kp P                     &kp B            &lt 8 SLASH      &leader1
-                                &kp DOWN         &key_repeat          &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &key_repeat        &layer_tap_repeat 6 LEFT  &kp RIGHT
+&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7                      &kp N8               &kp N9           &kp N0           &none
+&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                       &kp U                &kp Y            &kp SQT          &none
+&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N           &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &ok_ltm 9 I
+&mo 8          &kp Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                       &kp P                &kp B            &kp SLASH        &mo 8
+                                &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp LEFT_ARROW       &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -713,11 +724,11 @@
 
         Cmd {
             bindings = <
-&trans  &trans       &trans     &trans    &trans       &trans                       &trans              &trans            &trans             &trans             &trans  &trans
-&trans  &trans       &ok_close  &ok_find  &trans       &trans                       &trans              &trans            &trans             &ok_redo           &trans  &trans
-&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                       &trans              &ok_new_win       &trans             &trans             &trans  &trans
-&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste  &trans    &trans  &trans              &ok_find_replace  &trans             &trans             &trans  &trans
-                     &trans     &trans    &trans       &trans     &trans    &trans  &ok_sel_line_start  &ok_sel_line_end  &ok_sel_prev_word  &ok_sel_next_word
+&trans  &trans       &trans     &trans    &trans       &trans                         &trans              &trans            &trans             &trans             &trans  &trans
+&trans  &trans       &ok_close  &ok_find  &trans       &trans                         &trans              &trans            &trans             &ok_redo           &trans  &trans
+&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                         &trans              &ok_new_win       &trans             &trans             &trans  &trans
+&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste  &trans    &trans    &trans              &ok_find_replace  &trans             &trans             &trans  &trans
+                     &trans     &trans    &trans       &trans     &trans    &leader1  &ok_sel_line_start  &ok_sel_line_end  &ok_sel_prev_word  &ok_sel_next_word
             >;
 
             label = "CMD";
