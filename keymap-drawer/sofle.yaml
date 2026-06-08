@@ -36,7 +36,7 @@ layers:
   - {t: E, h: LEFT CONTROL}
   - {t: I, h: LEFT ALT}
   - {t: O, h: LEFT GUI}
-  - ''
+  - '&ok_ltm 9 I'
   - '&leader1'
   - {t: Z, h: CMD}
   - X
