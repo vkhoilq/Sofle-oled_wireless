@@ -573,15 +573,20 @@
                 bindings = <&sys_reset>;
             };
         };
+
         my_fast_lt: my_fast_lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";    // Defines how overlaps are handled
+            flavor = "tap-preferred";    // Defines how overlaps are handled
             tapping-term-ms = <100>;     // Time to trigger the hold behavior
             //quick-tap-ms = <150>;        // Allows repeated taps without triggering the layer
+
             require-prior-idle-ms = <125>; // Prevents accidental layer activation during fast typing
-            bindings = <&mo>, <&kp>;     // Hold = Layer, Tap = Key
+            bindings = <&mo>, <&kp>;
+     // Hold = Layer, Tap = Key
+            quick-tap-ms = <50>;
         };
+
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HRL";
@@ -634,10 +639,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7                      &kp N8               &kp N9           &kp N0           &none
-&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                       &kp U                &kp Y            &kp SQT          &none
-&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N           &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O  &ok_ltm 9 I
-&mo 8          &my_fast_lt 8 Z            &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                       &kp P                &kp B            &my_fast_lt 8 SLASH        &mo 8
+&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7                      &kp N8               &kp N9           &kp N0               &none
+&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                       &kp U                &kp Y            &kp SQT              &none
+&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N           &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O      &ok_ltm 9 I
+&mo 8          &my_fast_lt 8 Z  &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                       &kp P                &kp B            &my_fast_lt 8 SLASH  &mo 8
                                 &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp LEFT_ARROW       &kp RIGHT
             >;
 
