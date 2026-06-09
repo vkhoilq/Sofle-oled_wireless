@@ -577,13 +577,15 @@
         my_fast_lt: my_fast_lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";    // Defines how overlaps are handled
-            tapping-term-ms = <100>;     // Time to trigger the hold behavior
+            flavor = "balanced";    // Defines how overlaps are handled
+            tapping-term-ms = <150>;     // Time to trigger the hold behavior
             //quick-tap-ms = <150>;        // Allows repeated taps without triggering the layer
 
-            require-prior-idle-ms = <125>; // Prevents accidental layer activation during fast typing
+            require-prior-idle-ms = <200>; // Prevents accidental layer activation during fast typing
             bindings = <&mo>, <&kp>;
-     // Hold = Layer, Tap = Key
+
+            // Hold = Layer, Tap = Key
+
             quick-tap-ms = <50>;
         };
 
