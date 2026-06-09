@@ -578,7 +578,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";    // Defines how overlaps are handled
-            tapping-term-ms = <150>;     // Time to trigger the hold behavior
+            tapping-term-ms = <200>;     // Time to trigger the hold behavior
             //quick-tap-ms = <150>;        // Allows repeated taps without triggering the layer
 
             require-prior-idle-ms = <200>; // Prevents accidental layer activation during fast typing
