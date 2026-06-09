@@ -38,7 +38,7 @@ layers:
   - {t: O, h: LEFT GUI}
   - '&ok_ltm 9 I'
   - CMD
-  - Z
+  - {t: Z, h: CMD}
   - X
   - C
   - D
@@ -49,7 +49,7 @@ layers:
   - H
   - P
   - B
-  - /
+  - {t: /, h: CMD}
   - CMD
   - DOWN
   - UP ARROW
