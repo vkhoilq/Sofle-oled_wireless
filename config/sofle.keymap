@@ -625,6 +625,15 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        mmv_fast: mmv_fast {
+                compatible = "zmk,behavior-input-two-axis";
+                #binding-cells = <2>;
+                x-input-code = <INPUT_REL_X>;
+                y-input-code = <INPUT_REL_Y>;
+                time-to-max-speed-ms = <50>;   // Almost instant acceleration (default is 300)
+                acceleration-exponent = <1>;
+        };
     };
 
     keymap {
@@ -679,7 +688,7 @@
         Mouse {
             bindings = <
 &bootloader  &none     &none     &none      &none      &none                                    &none     &none           &none           &none         &none            &none
-&none        &none     &none     &none      &none      &none                                    &none     &none           &none           &none         &none            &none
+&none        &none     &none     &none      &none      &none                                    &none     &mmv_fast MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_UP         &mmv MOVE_RIGHT            &none
 &none        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LG(NUMBER_4))                     &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
 &none        &none     &none     &none      &none      &none                 &none    &none     &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                        &none     &none      &none      &none                 &none    &mkp MB2  &mkp MB1  &mkp MB3        &none           &none
