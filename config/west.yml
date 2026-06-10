@@ -29,8 +29,8 @@ manifest:
       remote: cormoran
       revision: main
     - name: zmk
-      remote: cormoran
-      revision: v0.3-branch+custom-studio-protocol+ble
+      remote: zmkfirmware
+      revision: v0.3
       import:
         file: app/west.yml
   self:
