@@ -8,7 +8,9 @@ manifest:
       url-base: https://github.com/mctechnology17
     - name: mentaldesk
       url-base: https://github.com/mentaldesk
-
+    - name: cormoran
+      url-base: https://github.com/cormoran
+      
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -27,5 +29,9 @@ manifest:
     - name: oskey
       remote: mentaldesk
       revision: main
+    - name: zmk
+      remote: cormoran
+      revision: v0.3-branch+custom-studio-protocol+ble
+
   self:
     path: config
