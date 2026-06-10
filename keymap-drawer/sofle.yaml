@@ -542,7 +542,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&caps_word'
-  - {t: ▽, type: trans}
+  - Ctl+SPACE
   - {t: ▽, type: trans}
   - '&leader1'
   - '&ok_sel_line_start'
