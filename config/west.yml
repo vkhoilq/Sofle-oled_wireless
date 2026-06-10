@@ -29,9 +29,9 @@ manifest:
     - name: oskey
       remote: mentaldesk
       revision: main
-    - name: zmk
+    - name: zmk-module-ble-management
       remote: cormoran
-      revision: v0.3-branch+custom-studio-protocol+ble
+      revision: main
 
   self:
     path: config
