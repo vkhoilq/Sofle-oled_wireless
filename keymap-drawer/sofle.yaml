@@ -141,11 +141,11 @@ layers:
   - ''
   - ''
   - ''
-  - Sft+Gui+Z
-  - Gui+V
-  - Gui+C
-  - Gui+X
-  - Gui+Z
+  - ''
+  - '&ok_prev_word'
+  - '&ok_zoom_in'
+  - '&ok_zoom_out'
+  - '&ok_next_word'
   - ''
   - ''
   - LGUI
