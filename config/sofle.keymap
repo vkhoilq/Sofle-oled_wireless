@@ -627,12 +627,12 @@
         };
 
         mmv_fast: mmv_fast {
-                compatible = "zmk,behavior-input-two-axis";
-                #binding-cells = <1>;
-                x-input-code = <INPUT_REL_X>;
-                y-input-code = <INPUT_REL_Y>;
-                time-to-max-speed-ms = <50>;   // Almost instant acceleration (default is 300)
-                acceleration-exponent = <1>;
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <50>;   // Almost instant acceleration (default is 300)
+            acceleration-exponent = <1>;
         };
     };
 
@@ -674,11 +674,11 @@
 
         Nav {
             bindings = <
-&none  &trans    &trans    &trans     &trans                    &trans                                   &trans         &trans     &trans     &trans     &trans     &none
-&none  &none     &none     &none      &none                     &none                                    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT                 &none                                    &kp CAPSLOCK   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &none     &none     &none      &sk LS(LA(LC(LEFT_GUI)))  &kp LS(LA(LC(LG(V))))  &none    &none    &kp INSERT     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                 &none     &none      &none                     &none                  &none    &kp RET  &kp BSPC       &kp DEL    &none      &none
+&none  &trans    &trans    &trans     &trans                    &trans                                   &trans        &trans         &trans       &trans        &trans         &none
+&none  &none     &none     &none      &none                     &none                                    &none         &ok_prev_word  &ok_zoom_in  &ok_zoom_out  &ok_next_word  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT                 &none                                    &kp CAPSLOCK  &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT      &none
+&none  &none     &none     &none      &sk LS(LA(LC(LEFT_GUI)))  &kp LS(LA(LC(LG(V))))  &none    &none    &kp INSERT    &kp HOME       &kp PG_DN    &kp PG_UP     &kp END        &none
+                 &none     &none      &none                     &none                  &none    &kp RET  &kp BSPC      &kp DEL        &none        &none
             >;
 
             label = "Nav";
@@ -687,11 +687,11 @@
 
         Mouse {
             bindings = <
-&bootloader  &none     &none     &none      &none      &none                                    &none     &none           &none           &none         &none            &none
-&none        &none     &none     &none      &none      &none                                    &none     &mmv_fast MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_UP         &mmv MOVE_RIGHT            &none
-&none        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LG(NUMBER_4))                     &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none        &none     &none     &none      &none      &none                 &none    &none     &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                       &none     &none      &none      &none                 &none    &mkp MB2  &mkp MB1  &mkp MB3        &none           &none
+&bootloader  &none     &none     &none      &none      &none                                    &none     &none                &none           &none         &none            &none
+&none        &none     &none     &none      &none      &none                                    &none     &mmv_fast MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp LS(LG(NUMBER_4))                     &none     &mmv MOVE_LEFT       &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none        &none     &none     &none      &none      &none                 &none    &none     &none     &msc SCRL_LEFT       &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                       &none     &none      &none      &none                 &none    &mkp MB2  &mkp MB1  &mkp MB3             &none           &none
             >;
 
             label = "Mouse";
