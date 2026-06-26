@@ -522,8 +522,8 @@ layers:
   - {t: ▽, type: trans}
   - '&ok_new_win'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&ok_zoom_in'
+  - '&ok_zoom_out'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '&ok_undo', type: held}
