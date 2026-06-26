@@ -762,10 +762,10 @@
 
         Cmd {
             bindings = <
-&trans  &trans       &trans     &trans    &trans       &trans                             &trans              &trans            &trans             &trans             &trans  &trans
-&trans  &trans       &ok_close  &ok_find  &trans       &trans                             &trans              &trans            &trans             &ok_redo           &trans  &trans
-&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                             &trans              &ok_new_win       &trans             &trans             &trans  &trans
-&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste      &trans    &trans    &trans              &ok_find_replace  &ok_prev_word      &ok_next_word      &trans  &trans
+&trans  &trans       &trans     &trans    &trans       &trans                             &trans              &trans            &trans             &trans             &trans        &trans
+&trans  &trans       &ok_close  &ok_find  &trans       &trans                             &trans              &trans            &trans             &ok_redo           &trans        &trans
+&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                             &trans              &ok_new_win       &trans             &ok_zoom_in        &ok_zoom_out  &trans
+&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste      &trans    &trans    &trans              &ok_find_replace  &ok_prev_word      &ok_next_word      &trans        &trans
                      &trans     &trans    &caps_word   &kp LC(SPACE)  &trans    &leader1  &ok_sel_line_start  &ok_sel_line_end  &ok_sel_prev_word  &ok_sel_next_word
             >;
 
