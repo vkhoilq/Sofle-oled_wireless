@@ -664,11 +664,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7                      &kp N8               &kp N9           &kp N0               &none
-&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                       &kp U                &kp Y            &kp SQT              &none
-&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N           &hrm LEFT_CONTROL E  &hrm LEFT_ALT I  &hrm LEFT_GUI O      &ok_ltm 9 I
-&mo 10         &my_fast_lt 8 Z  &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                       &kp P                &kp B            &my_fast_lt 8 SLASH  &mo 8
-                                &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp LEFT_ARROW       &kp RIGHT
+&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7               &kp N8             &kp N9              &kp N0        &none
+&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                &kp U              &kp Y               &kp SEMI      &none
+&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N    &hrm RIGHT_CONTROL E  &hrm RIGHT_ALT I   &hrm RGUI O   &none
+&mo 10         &my_fast_lt 8 Z  &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                &kp COMMA          &kp DOT             &kp SLASH     &none
+                                &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp PG_UP       &kp PG_DN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -718,7 +718,7 @@
 &none  &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)                          &none  &none      &none      &none     &none     &none
 &none  &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)                          &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)  &none            &none  &none  &none      &none      &none     &none     &none
-                      &none         &none          &kp LS(LPAR)   &kp LS(RPAR)  &kp LS(UNDER)    &none  &none  &none      &none      &none
+                       &none         &none          &kp LS(LPAR)   &kp LS(RPAR)  &kp LS(UNDER)    &none  &none  &none      &none      &none
             >;
 
             label = "SYM";
@@ -730,7 +730,7 @@
 &none  &kp LBKT   &kp N7  &kp N8  &kp N9   &kp RBKT                       &kp DOT  &kp COMMA  &none      &none     &none     &none
 &none  &kp SEMI   &kp N4  &kp N5  &kp N6   &kp EQUAL                      &none    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH   &none        &none  &ip      &username  &none      &none     &none     &none
-                  &none   &none   &kp DOT  &kp N0     &kp MINUS    &none  &none    &none      &none      &none
+                   &none   &none   &kp DOT  &kp N0     &kp MINUS    &none  &none    &none      &none      &none
             >;
 
             label = "NUM";
@@ -742,7 +742,7 @@
 &none  &kp F12  &kp F7  &kp F8  &kp F9    &none                        &none  &none      &none      &none     &none     &none
 &none  &kp F11  &kp F4  &kp F5  &kp F6    &none                        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3    &none      &none      &none  &none  &none      &none      &none     &none     &none
-                &none   &none   &kp LGUI  &kp SPACE  &kp TAB    &none  &none  &none      &none      &none
+                 &none   &none   &kp LGUI  &kp SPACE  &kp TAB    &none  &none  &none      &none      &none
             >;
 
             label = "Func";
@@ -750,7 +750,7 @@
 
         Media {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                       &none             &none           &none            &none              &none       &ext_power EP_TOG
+&bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                       &none             &none           &none            &none              &none       &ext_power EXT_POWER_OFF
 &out OUT_BLE    &none         &none         &none         &none         &none                              &none             &none           &none            &none              &none       &none
 &out OUT_USB    &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &none                              &none             &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_NEXT  &none
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none         &none    &none       &none             &none           &none            &none              &none       &studio_unlock
@@ -762,10 +762,10 @@
 
         Cmd {
             bindings = <
-&trans  &trans       &trans     &trans    &trans       &trans                             &trans              &trans            &trans             &trans             &trans        &trans
-&trans  &trans       &ok_close  &ok_find  &trans       &trans                             &trans              &trans            &trans             &ok_redo           &trans        &trans
-&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                             &trans              &ok_new_win       &trans             &ok_zoom_in        &ok_zoom_out  &trans
-&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste      &trans    &trans    &trans              &ok_find_replace  &ok_prev_word      &ok_next_word      &trans        &trans
+&trans  &trans       &trans     &trans    &trans       &trans                             &trans              &trans            &trans             &trans             &trans  &trans
+&trans  &trans       &ok_close  &ok_find  &trans       &trans                             &trans              &trans            &trans             &ok_redo           &trans  &trans
+&trans  &ok_sel_all  &trans     &ok_save  &ok_new_tab  &trans                             &trans              &ok_new_win       &trans             &trans             &trans  &trans
+&trans  &ok_undo     &ok_cut    &ok_copy  &trans       &ok_paste      &trans    &trans    &trans              &ok_find_replace  &ok_prev_word      &ok_next_word      &trans  &trans
                      &trans     &trans    &caps_word   &kp LC(SPACE)  &trans    &leader1  &ok_sel_line_start  &ok_sel_line_end  &ok_sel_prev_word  &ok_sel_next_word
             >;
 
