@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - Hyper+D
+  - ''
   - Ctl+SPACE
   - Q
   - W
@@ -44,7 +44,7 @@ layers:
   - D
   - V
   - MUTE
-  - ''
+  - Hyper+D
   - K
   - H
   - P
