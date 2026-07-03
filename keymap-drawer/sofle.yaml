@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - A
+  - ''
   - Ctl+SPACE
   - Q
   - W
@@ -23,7 +23,7 @@ layers:
   - L
   - U
   - Y
-  - ;
+  - ''''
   - ''
   - '&ok_ltm 9 I'
   - {t: A, h: LEFT GUI}
@@ -33,10 +33,10 @@ layers:
   - G
   - M
   - {t: N, h: LEFT SHIFT}
-  - {t: E, h: RIGHT CONTROL}
-  - {t: I, h: RIGHT ALT}
-  - {t: O, h: RGUI}
-  - ''
+  - {t: E, h: LEFT CONTROL}
+  - {t: I, h: LEFT ALT}
+  - {t: O, h: LEFT GUI}
+  - '&ok_ltm 9 I'
   - Srt
   - {t: Z, h: CMD}
   - X
@@ -47,10 +47,10 @@ layers:
   - ''
   - K
   - H
-  - ','
-  - .
-  - /
-  - ''
+  - P
+  - B
+  - {t: /, h: CMD}
+  - CMD
   - DOWN
   - UP ARROW
   - {t: ESC, h: Media}
@@ -59,8 +59,8 @@ layers:
   - {t: ENTER, h: SYM}
   - {t: BACKSPACE, h: NUM}
   - {t: DELETE, h: Func}
-  - PG UP
-  - PG DN
+  - LEFT ARROW
+  - RIGHT
   BK:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -439,7 +439,7 @@ layers:
   - ''
   - ''
   - ''
-  - EXT POWER OFF
+  - EP TOG
   - OUT BLE
   - ''
   - ''
@@ -522,8 +522,8 @@ layers:
   - {t: ▽, type: trans}
   - '&ok_new_win'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&ok_zoom_in'
+  - '&ok_zoom_out'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '&ok_undo', type: held}
