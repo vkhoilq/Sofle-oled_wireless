@@ -24,10 +24,7 @@ manifest:
       revision: main
     - name: oskey
       remote: mentaldesk
-      revision: main
-    - name: zmk-module-ble-management
-      remote: cormoran
-      revision: main
+      revision: v0.3.0
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
