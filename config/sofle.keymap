@@ -664,11 +664,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7               &kp N8             &kp N9              &kp N0        &none
-&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                &kp U              &kp Y               &kp SEMI      &none
-&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N    &hrm RIGHT_CONTROL E  &hrm RIGHT_ALT I   &hrm RGUI O   &none
-&mo 10         &my_fast_lt 8 Z  &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                &kp COMMA          &kp DOT             &kp SLASH     &none
-                                &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp PG_UP       &kp PG_DN
+&kp RIGHT_ALT  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5                                                &kp N6                         &kp N7                      &kp N8                &kp N9            &kp N0       &kp A
+&kp LC(SPACE)  &kp Q            &kp W            &kp F                &kp J              &kp COMMA                                             &kp DOT                        &kp L                       &kp U                 &kp Y             &kp SEMI     &none
+&ok_ltm 9 I    &hrl LEFT_GUI A  &hrl LEFT_ALT R  &hrl LEFT_CONTROL S  &hrl LEFT_SHIFT T  &kp G                                                 &kp M                          &hrm LEFT_SHIFT N           &hrm RIGHT_CONTROL E  &hrm RIGHT_ALT I  &hrm RGUI O  &none
+&mo 10         &my_fast_lt 8 Z  &kp X            &kp C                &kp D              &kp V        &kp C_MUTE    &none                      &kp K                          &kp H                       &kp COMMA             &kp DOT           &kp SLASH    &none
+                                &kp DOWN         &kp UP_ARROW         &lt 7 ESC          &lt 2 SPACE  &lt 3 TAB     &layer_tap_repeat 4 ENTER  &layer_tap_repeat 5 BACKSPACE  &layer_tap_repeat 6 DELETE  &kp PG_UP             &kp PG_DN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -718,7 +718,7 @@
 &none  &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)                          &none  &none      &none      &none     &none     &none
 &none  &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)                          &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)  &none            &none  &none  &none      &none      &none     &none     &none
-                       &none         &none          &kp LS(LPAR)   &kp LS(RPAR)  &kp LS(UNDER)    &none  &none  &none      &none      &none
+                      &none         &none          &kp LS(LPAR)   &kp LS(RPAR)  &kp LS(UNDER)    &none  &none  &none      &none      &none
             >;
 
             label = "SYM";
@@ -730,7 +730,7 @@
 &none  &kp LBKT   &kp N7  &kp N8  &kp N9   &kp RBKT                       &kp DOT  &kp COMMA  &none      &none     &none     &none
 &none  &kp SEMI   &kp N4  &kp N5  &kp N6   &kp EQUAL                      &none    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH   &none        &none  &ip      &username  &none      &none     &none     &none
-                   &none   &none   &kp DOT  &kp N0     &kp MINUS    &none  &none    &none      &none      &none
+                  &none   &none   &kp DOT  &kp N0     &kp MINUS    &none  &none    &none      &none      &none
             >;
 
             label = "NUM";
@@ -742,7 +742,7 @@
 &none  &kp F12  &kp F7  &kp F8  &kp F9    &none                        &none  &none      &none      &none     &none     &none
 &none  &kp F11  &kp F4  &kp F5  &kp F6    &none                        &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3    &none      &none      &none  &none  &none      &none      &none     &none     &none
-                 &none   &none   &kp LGUI  &kp SPACE  &kp TAB    &none  &none  &none      &none      &none
+                &none   &none   &kp LGUI  &kp SPACE  &kp TAB    &none  &none  &none      &none      &none
             >;
 
             label = "Func";
