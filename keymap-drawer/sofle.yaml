@@ -694,3 +694,12 @@ combos:
   k: '&key_repeat'
 - p: [45, 46]
   k: '&key_repeat'
+- p: [22, 23]
+  k: '&os_sel'
+  l: [Mouse]
+- p: [34, 35]
+  k: '&os_sel'
+  l: [Mouse]
+- p: [48, 49]
+  k: '&os_sel'
+  l: [Mouse]
