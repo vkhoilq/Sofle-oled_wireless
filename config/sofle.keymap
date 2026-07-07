@@ -78,19 +78,19 @@
         };
 
         switchtoMac {
-            bindings = <&os_sel OS_MAC>;
+            bindings = <&os_sel 1>;
             key-positions = <22 23>;
             layers = <3>;
         };
 
         SwitchToWindows {
-            bindings = <&os_sel OS_WIN>;
+            bindings = <&os_sel 0>;
             key-positions = <34 35>;
             layers = <3>;
         };
 
         SwitchToAndroid {
-            bindings = <&os_sel OS_LIN>;
+            bindings = <&os_sel 2>;
             key-positions = <48 49>;
             layers = <3>;
         };
