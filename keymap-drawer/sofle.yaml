@@ -695,11 +695,11 @@ combos:
 - p: [45, 46]
   k: '&key_repeat'
 - p: [22, 23]
-  k: '&os_sel'
+  k: '&os_sel OS_MAC'
   l: [Mouse]
 - p: [34, 35]
-  k: '&os_sel'
+  k: '&os_sel OS_WIN'
   l: [Mouse]
 - p: [48, 49]
-  k: '&os_sel'
+  k: '&os_sel OS_LIN'
   l: [Mouse]
