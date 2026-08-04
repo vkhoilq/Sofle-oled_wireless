@@ -222,7 +222,7 @@ layers:
   - ''
   - ''
   - Gui+Sft+M
-  - Sft+S
+  - Sft+Gui+S
   - Sft+Gui+C
   - Sft+Gui+G
   - Sft+Gui+SPACE
