@@ -523,6 +523,23 @@
             bindings = <&kp LC(LBRC)>, <&kp LG(LBRC)>, <&kp LC(PG_UP)>;
         };
 
+        ok_next_window: os_key_next_window {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+
+            /*            Win           Mac              Lin  */
+
+            bindings = <&kp LG(GRAVE)>, <&kp LG(GRAVE)>, <&kp LG(GRAVE)>;
+        };
+
+        ok_prev_window: os_key_prev_window {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+
+            /*            Win           Mac              Lin  */
+
+            bindings = <&kp LG(LS(GRAVE))>, <&kp LG(LS(GRAVE))>, <&kp LG(LS(GRAVE))>;
+        };
         ok_mission_ctrl: os_key_mission_control {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
@@ -795,7 +812,7 @@
 &trans  &trans  &trans  &trans  &trans        &trans                          &trans        &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &ok_prev_app  &ok_next_app                    &trans        &trans        &trans  &trans  &trans  &os_sel 0
 &trans  &trans  &trans  &trans  &ok_prev_tab  &ok_next_tab                    &ok_prev_app  &ok_next_app  &trans  &trans  &trans  &os_sel 1
-&trans  &trans  &trans  &trans  &trans        &trans        &trans    &trans  &trans        &trans        &trans  &trans  &trans  &os_sel 2
+&trans  &trans  &trans  &trans  &ok_prev_window  &ok_next_window        &trans    &trans  &trans        &trans        &trans  &trans  &trans  &os_sel 2
                 &trans  &trans  &trans        &trans        &trans    &trans  &trans        &trans        &trans  &trans
             >;
 
